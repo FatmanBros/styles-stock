@@ -3,17 +3,19 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ToggleComponent } from './component/checkbox/toggle/toggle.component';
+import { ToggleSwitchComponent } from './component/checkbox/toggle-switch/toggle-switch.component';
 import { TopComponent } from './component/top/top.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ToggleComponent,
+    ToggleSwitchComponent,
     TopComponent,
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
     AppRoutingModule
   ],
   providers: [],

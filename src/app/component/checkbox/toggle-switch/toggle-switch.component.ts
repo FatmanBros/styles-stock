@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-toggle',
-  templateUrl: './toggle.component.html',
-  styleUrls: ['./toggle.component.scss']
+  templateUrl: './toggle-switch.component.html',
+  styleUrls: ['./toggle-switch.component.scss']
 })
-export class ToggleComponent implements OnInit {
+export class ToggleSwitchComponent implements OnInit {
 
   public title = 'トグルボタン';
 
