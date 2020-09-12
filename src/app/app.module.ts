@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { ToggleSwitchComponent } from './component/checkbox/toggle-switch/toggle-switch.component';
 import { TopComponent } from './component/top/top.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ReactiveFormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     ReactiveFormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FlexLayoutModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,6 +1,6 @@
-<div *ngFor="let content of contentList">
-  <label>{{content.title}}</label>
-  <ul>
+<div class="top-frame" fxLayout="column">
+  <ul fxFlex="grow" *ngFor="let content of contentList">
+    <h2>{{content.title}}</h2>
     <li *ngFor="let detail of getDetail(content)">
       <a [routerLink]="detail.path">{{detail.title}}</a>
     </li>

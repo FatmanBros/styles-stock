@@ -1,6 +1,8 @@
-<nav>
-  <div class="title">{{title}}</div>
-</nav>
-<div>
-  <router-outlet></router-outlet>
+<div class="out-frame" fxLayout="column">
+  <nav>
+    <a class="title" routerLink="">{{title}}</a>
+  </nav>
+  <div fxFlex="grow">
+    <router-outlet></router-outlet>
+  </div>
 </div>

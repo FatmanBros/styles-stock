@@ -1,0 +1,18 @@
+.out-frame {
+  width: 100vw;
+  height: 100vh;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+$link-color: #cccccc;
+a.title {
+  color: $link-color;
+  text-decoration: none;
+
+  transition: 0.3s;
+}
+a.title:hover {
+  color: white;
+  transition: 0.3s;
+}
