@@ -13,14 +13,3 @@ a.title {
 a.title:hover {
   color: white;
 }
-
-.example {
-  -webkit-box-shadow: 0 0 40px rgba(0, 0, 0, 0.2) inset,
-    0 0 4px rgba(0, 0, 0, 0.2);
-  padding: 1.5rem;
-}
-
-.example.hidden {
-  height: 0px;
-  display: none;
-}

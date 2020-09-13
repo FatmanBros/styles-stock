@@ -21,6 +21,7 @@ export class DialogComponent implements OnInit {
       return;
     }
     let factory = this.resolver.resolveComponentFactory(component);
+    this.viewContainerRef.clear();
     this.viewContainerRef.createComponent(factory);
   };
 

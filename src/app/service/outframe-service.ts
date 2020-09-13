@@ -18,6 +18,13 @@ export class OutframeService {
     this.$exampleComponent.next(component);
   }
 
+  public selectedComponent: DynamicComponent;
+  public $select = new Subject<DynamicComponent>();
+  public setSelectComponent(component: DynamicComponent) {
+    this.$select.next(component);
+    this.selectedComponent = component;
+  }
+
   constructor() { }
 
 }

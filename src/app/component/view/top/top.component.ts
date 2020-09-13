@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { Subscription } from 'rxjs';
 import { ModuleConstants } from 'src/app/module/module-constants';
 import { OutframeService } from 'src/app/service/outframe-service';
+import { DynamicComponent } from '../dynamic.component';
 
 @Component({
   selector: 'app-top',
@@ -12,11 +14,16 @@ export class TopComponent implements OnInit {
 
   public title = 'トップページ';
 
+  public example: DynamicComponent;
+  public select: DynamicComponent;
+
+  public subscriptions: Subscription[] = [];
+
   public contentList: { title: string, detail: { [key: string]: { component: any } } }[] = [];
 
   constructor(
     private matDialog: MatDialog,
-    private outframeService: OutframeService
+    private outFrameService: OutframeService
   ) { }
 
   ngOnInit(): void {
@@ -24,21 +31,18 @@ export class TopComponent implements OnInit {
     Object.keys(ModuleConstants.StylesComponents).forEach(key => {
       this.contentList.push({ title: key, detail: ModuleConstants.StylesComponents[key] })
     })
-  }
 
-
-  public getDetail(contents): { title: string, path: string }[] {
-    return Object.keys(contents.detail).map(content => {
-      return { title: content, path: '/' + contents.title + '/' + content, component: contents.detail[content].component };
+    const exampleSub = this.outFrameService.$exampleComponent.subscribe(example => {
+      this.example = example;
     })
+
+    const selectSub = this.outFrameService.$select.subscribe(select => {
+      this.select = select;
+    })
+    this.subscriptions.push(selectSub);
   }
 
-  /**
-   * ダイアログでページの一部を表示する
-   * 
-   * @param detail 
-   */
-  public openDialog(detail) {
-    this.outframeService.setExampleComponent(detail.component);
+  ngOnDestroy() {
+    this.subscriptions.forEach(ss => ss.unsubscribe())
   }
 }

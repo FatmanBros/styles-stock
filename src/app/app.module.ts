@@ -11,6 +11,8 @@ import { TopComponent } from './component/view/top/top.component';
 import { ToggleSwitchComponent } from './component/view/checkbox/toggle-switch/toggle-switch.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { OverlayModule } from '@angular/cdk/overlay';
+import { DesignButtonComponent } from './component/view/button/design-button/design-button.component';
+import { GroupComponent } from './component/view/group/group.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,8 @@ import { OverlayModule } from '@angular/cdk/overlay';
     ToggleSwitchComponent,
     TopComponent,
     DialogComponent,
+    DesignButtonComponent,
+    GroupComponent,
   ],
   imports: [
     BrowserModule,
