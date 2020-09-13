@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ClearButtonComponent } from './clear-button.component';
+import { LoadButtonComponent } from './load-button.component';
 
-describe('ClearButtonComponent', () => {
-  let component: ClearButtonComponent;
-  let fixture: ComponentFixture<ClearButtonComponent>;
+describe('LoadButtonComponent', () => {
+  let component: LoadButtonComponent;
+  let fixture: ComponentFixture<LoadButtonComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ClearButtonComponent ]
+      declarations: [ LoadButtonComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ClearButtonComponent);
+    fixture = TestBed.createComponent(LoadButtonComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

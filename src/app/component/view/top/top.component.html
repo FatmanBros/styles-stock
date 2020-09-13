@@ -1,11 +1,13 @@
-<div fxLayout="column">
-  <div class="top-frame" fxLayout="column">
+<div class="out-frame" fxLayout="row">
+  <div class="menu-frame" fxLayout="column">
     <app-group *ngFor="let content of contentList" [content]="content"></app-group>
   </div>
-  <div *ngIf="example" class="example">
-    <app-dialog class="example-dialog" [component]="example"></app-dialog>
-  </div>
-  <div *ngIf="!example && select" class="example">
-    <app-dialog class="example-dialog" [component]="select"></app-dialog>
+  <div class="view-frame">
+    <div *ngIf="example" class="example">
+      <app-dialog class="example-dialog" [component]="example"></app-dialog>
+    </div>
+    <div *ngIf="!example && select" class="example">
+      <app-dialog class="example-dialog" [component]="select"></app-dialog>
+    </div>
   </div>
 </div>
