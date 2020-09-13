@@ -13,6 +13,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { OverlayModule } from '@angular/cdk/overlay';
 import { DesignButtonComponent } from './component/view/button/design-button/design-button.component';
 import { GroupComponent } from './component/view/group/group.component';
+import { ClearButtonComponent } from './component/view/button/clear-button/clear-button.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { GroupComponent } from './component/view/group/group.component';
     DialogComponent,
     DesignButtonComponent,
     GroupComponent,
+    ClearButtonComponent,
   ],
   imports: [
     BrowserModule,
