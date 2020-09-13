@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { TopComponent } from './component/view/top/top.component';
 import { ModuleConstants } from './module/module-constants'
-import { TopComponent } from './component/top/top.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'TOP', pathMatch: 'full' },

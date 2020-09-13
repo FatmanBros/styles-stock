@@ -1,6 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 
+// css reset
 @import './css-reset.scss';
+
+// cdk
+@import '~@angular/cdk/overlay-prebuilt.css';
 
 $font-size: 1.5rem;
 $nav-height: 3rem;
