@@ -1,5 +1,6 @@
-import { Component, ComponentFactory, ComponentFactoryResolver, Inject, OnInit, ViewContainerRef } from '@angular/core';
+import { Component, ComponentFactory, ComponentFactoryResolver, Inject, Injector, Input, OnInit, ViewContainerRef } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { ToggleSwitchComponent } from '../../view/checkbox/toggle-switch/toggle-switch.component';
 import { DynamicComponent } from '../../view/dynamic.component';
 
 export interface DialogData {
@@ -14,19 +15,23 @@ export interface DialogData {
 })
 export class DialogComponent implements OnInit {
 
+  @Input()
+  public set component(component: any) {
+    if (!component) {
+      return;
+    }
+    let factory = this.resolver.resolveComponentFactory(component);
+    this.viewContainerRef.createComponent(factory);
+  };
+
   private factory: ComponentFactory<DynamicComponent>;
 
   constructor(
-    public dialogRef: MatDialogRef<DialogComponent>,
     public viewContainerRef: ViewContainerRef,
     private resolver: ComponentFactoryResolver,
-
-    @Inject(MAT_DIALOG_DATA)
-    public data: DialogData
-  ) { }
+  ) {
+  }
 
   ngOnInit() {
-    this.factory = this.resolver.resolveComponentFactory(DynamicComponent);
-    this.viewContainerRef.createComponent(this.factory);
   }
 }

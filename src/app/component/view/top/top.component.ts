@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ModuleConstants } from 'src/app/module/module-constants';
+import { OutframeService } from 'src/app/service/outframe-service';
 
 @Component({
   selector: 'app-top',
@@ -13,7 +14,10 @@ export class TopComponent implements OnInit {
 
   public contentList: { title: string, detail: { [key: string]: { component: any } } }[] = [];
 
-  constructor(private matDialog: MatDialog) { }
+  constructor(
+    private matDialog: MatDialog,
+    private outframeService: OutframeService
+  ) { }
 
   ngOnInit(): void {
     // メニューリスト追加
@@ -35,6 +39,6 @@ export class TopComponent implements OnInit {
    * @param detail 
    */
   public openDialog(detail) {
-    this.matDialog.open(detail.component);
+    this.outframeService.setExampleComponent(detail.component);
   }
 }

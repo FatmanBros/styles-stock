@@ -5,4 +5,7 @@
   <div fxFlex="grow">
     <router-outlet></router-outlet>
   </div>
+  <div class="example" [ngClass]="{'hidden': !example}">
+    <app-dialog [component]="example"></app-dialog>
+  </div>
 </div>

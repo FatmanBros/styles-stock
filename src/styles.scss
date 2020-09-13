@@ -1,19 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
 
 // css reset
-@import './css-reset.scss';
+@import "./css-reset.scss";
 
 // cdk
-@import '~@angular/cdk/overlay-prebuilt.css';
+@import "~@angular/cdk/overlay-prebuilt.css";
 
 $font-size: 1.5rem;
 $nav-height: 3rem;
 
 body {
-  background:#F2EFE7;
-  -webkit-box-shadow: 0 0 40px rgba(0, 0, 0, 0.2) inset,0 0 4px rgba(0, 0, 0, 0.2) ;
-  -moz-box-shadow: 0 0 40px rgba(0, 0, 0, 0.2) inset,0 0 4px rgba(0, 0, 0, 0.2) ;
-  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2) inset,0 0 4px rgba(0, 0, 0, 0.2) ;
+  background: #f2efe7;
+  -webkit-box-shadow: 0 0 40px rgba(0, 0, 0, 0.2) inset,
+    0 0 4px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 0 40px rgba(0, 0, 0, 0.2) inset, 0 0 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.2) inset, 0 0 4px rgba(0, 0, 0, 0.2);
 }
 
 nav {
@@ -23,6 +24,14 @@ nav {
   padding-left: 1.5rem;
 
   color: white;
-  
+
   background-color: #5f5f5f;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: #5f5f5f;
 }

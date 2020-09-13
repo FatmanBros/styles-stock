@@ -1,8 +1,10 @@
 <div class="top-frame" fxLayout="column">
   <ul fxFlex="grow" *ngFor="let content of contentList">
     <h2>{{content.title}}</h2>
-    <li *ngFor="let detail of getDetail(content)" (mouseover)="openDialog(detail)">
-      <a [routerLink]="detail.path">{{detail.title}}</a>
-    </li>
+    <div fxLayout="row wrap">
+      <li *ngFor="let detail of getDetail(content)" (mouseover)="openDialog(detail)">
+        <a [routerLink]="detail.path">{{detail.title}}</a>
+      </li>
+    </div>
   </ul>
 </div>

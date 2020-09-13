@@ -3,9 +3,9 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { MatDialogModule } from '@angular/material/dialog';
+import { MatDialog, MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 import { DialogComponent } from './component/ui/dialog/dialog.component';
 import { TopComponent } from './component/view/top/top.component';
 import { ToggleSwitchComponent } from './component/view/checkbox/toggle-switch/toggle-switch.component';
@@ -21,6 +21,7 @@ import { OverlayModule } from '@angular/cdk/overlay';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
     FlexLayoutModule,

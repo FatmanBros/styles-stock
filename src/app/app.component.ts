@@ -1,5 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
+import { DynamicComponent } from './component/view/dynamic.component';
 import { OutframeService } from './service/outframe-service';
 
 @Component({
@@ -9,6 +10,9 @@ import { OutframeService } from './service/outframe-service';
 })
 export class AppComponent implements OnInit, OnDestroy {
   public title = 'style-stock';
+
+  public example: DynamicComponent;
+
   private subscriptions: Subscription[] = [];
 
   constructor(private outFrameService: OutframeService) {
@@ -16,11 +20,15 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    const sub1 = this.outFrameService.$title.subscribe(title => {
+    const titleSubscription = this.outFrameService.$title.subscribe(title => {
       this.title = title;
     })
+    this.subscriptions.push(titleSubscription);
 
-    this.subscriptions.push(sub1);
+    const exampleSub = this.outFrameService.$exampleComponent.subscribe(example => {
+      this.example = example;
+    })
+    this.subscriptions.push(exampleSub);
   }
 
   ngOnDestroy() {

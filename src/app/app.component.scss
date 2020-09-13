@@ -9,10 +9,18 @@ $link-color: #cccccc;
 a.title {
   color: $link-color;
   text-decoration: none;
-
-  transition: 0.3s;
 }
 a.title:hover {
   color: white;
-  transition: 0.3s;
+}
+
+.example {
+  -webkit-box-shadow: 0 0 40px rgba(0, 0, 0, 0.2) inset,
+    0 0 4px rgba(0, 0, 0, 0.2);
+  padding: 1.5rem;
+}
+
+.example.hidden {
+  height: 0px;
+  display: none;
 }
