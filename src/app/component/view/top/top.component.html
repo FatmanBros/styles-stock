@@ -2,10 +2,10 @@
   <div class="top-frame" fxLayout="column">
     <app-group *ngFor="let content of contentList" [content]="content"></app-group>
   </div>
-  <div class="example" [class.hidden]="!example">
+  <div *ngIf="example" class="example">
     <app-dialog class="example-dialog" [component]="example"></app-dialog>
   </div>
-  <div class="example" [class.hidden]="example || !select">
+  <div *ngIf="!example && select" class="example">
     <app-dialog class="example-dialog" [component]="select"></app-dialog>
   </div>
 </div>

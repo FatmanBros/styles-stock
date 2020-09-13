@@ -1,8 +1,9 @@
 <ul fxFlex="grow">
   <h2>{{groupTitle}}</h2>
   <div class="content-frame" fxLayout="row wrap">
-    <div *ngFor="let detail of detailList" [class.selected]="detail.component === getSelected()">
-      <li (click)="onClick(detail)" (mouseleave)="removeExample()" (mouseenter)="selectExample(detail)">
+    <div *ngFor="let detail of detailList">
+      <li [class.selected]="detail.component === getSelected()" (click)="onClick(detail)" (mouseleave)="removeExample()"
+        (mouseenter)="selectExample(detail)">
         <label>{{detail.title}}</label>
       </li>
     </div>

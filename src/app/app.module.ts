@@ -14,6 +14,7 @@ import { OverlayModule } from '@angular/cdk/overlay';
 import { DesignButtonComponent } from './component/view/button/design-button/design-button.component';
 import { GroupComponent } from './component/view/group/group.component';
 import { ClearButtonComponent } from './component/view/button/clear-button/clear-button.component';
+import { HoverEffectsComponent } from './component/view/button/hover-effects/hover-effects.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { ClearButtonComponent } from './component/view/button/clear-button/clear
     DesignButtonComponent,
     GroupComponent,
     ClearButtonComponent,
+    HoverEffectsComponent,
   ],
   imports: [
     BrowserModule,
