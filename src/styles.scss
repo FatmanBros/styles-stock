@@ -6,6 +6,10 @@
 // cdk
 @import "~@angular/cdk/overlay-prebuilt.css";
 
+// code-mirror
+@import '~codemirror/lib/codemirror';
+@import '~codemirror/theme/material';
+
 $font-size: 1.5rem;
 $nav-height: 3rem;
 
@@ -48,4 +52,8 @@ li {
 
 a {
   cursor: pointer;
+}
+
+.CodeMirror  {
+  height: calc((100vh - 10rem) / 3);
 }

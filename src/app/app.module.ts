@@ -15,6 +15,8 @@ import { DesignButtonComponent } from './component/view/button/design-button/des
 import { GroupComponent } from './component/view/group/group.component';
 import { LoadButtonComponent } from './component/view/button/load-button/load-button.component';
 import { HoverEffectsComponent } from './component/view/button/hover-effects/hover-effects.component';
+import { CodeComponent } from './component/ui/code/code.component';
+import { CodemirrorModule } from '@ctrl/ngx-codemirror';
 
 @NgModule({
   declarations: [
@@ -26,10 +28,12 @@ import { HoverEffectsComponent } from './component/view/button/hover-effects/hov
     GroupComponent,
     LoadButtonComponent,
     HoverEffectsComponent,
+    CodeComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    CodemirrorModule,
     ReactiveFormsModule,
     AppRoutingModule,
     FlexLayoutModule,
