@@ -9,10 +9,10 @@ import { OutframeService } from 'src/app/service/outframe-service';
 export class GroupComponent implements OnInit {
 
   public groupTitle: string = "";
-  public detailList;
+  public detailList: { title: string, path: string, component: any }[];
 
   @Input()
-  public set content(contents) {
+  public set content(contents: { title: string, detail: { [key: string]: { component: any } } }) {
     this.groupTitle = contents.title;
     this.detailList = Object.keys(contents.detail).map(key => {
       return { title: key, path: '/' + contents.title + '/' + key, component: contents.detail[key].component };
@@ -31,7 +31,7 @@ export class GroupComponent implements OnInit {
    * 
    * @param detail 
    */
-  public selectExample(detail) {
+  public selectExample(detail: { component: any }) {
     this.outframeService.setExampleComponent(detail.component);
   }
   /**
@@ -40,7 +40,7 @@ export class GroupComponent implements OnInit {
   public removeExample() {
     this.outframeService.setExampleComponent(null);
   }
-  public onClick(detail) {
+  public onClick(detail: { component: any }) {
     this.outframeService.setSelectComponent(detail.component);
   }
 

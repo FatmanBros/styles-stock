@@ -4,6 +4,6 @@ export interface IDynamicComponent {
 
 export class DynamicComponent {
   
-  public title;
+  public title: string;
   
 }

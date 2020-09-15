@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { OutframeService } from 'src/app/service/outframe-service';
+import { DynamicComponent } from '../../view/dynamic.component';
 
 @Component({
   selector: 'app-code',
@@ -19,7 +20,7 @@ export class CodeComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.outFrameService.$select.subscribe(selected => {
+    this.outFrameService.$select.subscribe((selected: any) => {
       let template = selected['decorators'][0]['args'][0]['templateUrl']
       let style = selected['decorators'][0]['args'][0]['styleUrls'][0]
     })

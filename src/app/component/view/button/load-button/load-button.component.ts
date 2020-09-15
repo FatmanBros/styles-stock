@@ -16,7 +16,7 @@ export class LoadButtonComponent implements OnInit {
   }
 
   public async onClick() {
-    const sleep = msec => new Promise(resolve => setTimeout(resolve, msec));
+    const sleep = (msec: number) => new Promise(resolve => setTimeout(resolve, msec));
 
     this.loading = true;
     await sleep(1000);

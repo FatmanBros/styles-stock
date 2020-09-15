@@ -3,11 +3,14 @@ import { DesignButtonComponent } from '../component/view/button/design-button/de
 import { HoverEffectsComponent } from '../component/view/button/hover-effects/hover-effects.component';
 import { ToggleSwitchComponent } from '../component/view/checkbox/toggle-switch/toggle-switch.component';
 
+interface StringKeyObject {
+  [key: string]: any;
+}
 export class ModuleConstants {
-  public static StylesComponents = {
+  public static StylesComponents: { [key: string]: { [key: string]: { component: any } } } = {
     button: {
       button1: { component: DesignButtonComponent },
-      'loading': { component: LoadButtonComponent },
+      loading: { component: LoadButtonComponent },
       'hover-effects': { component: HoverEffectsComponent }
     },
     checkbox: {
