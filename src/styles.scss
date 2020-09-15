@@ -11,7 +11,7 @@
 @import '~codemirror/theme/material';
 
 $font-size: 1.5rem;
-$nav-height: 3rem;
+$nav-height: 3.5rem;
 
 body {
   background: #f2efe7;
@@ -23,7 +23,7 @@ body {
 
 nav {
   font-size: $font-size;
-  height: $nav-height;
+  min-height: $nav-height;
   padding-top: calc((#{$nav-height} - #{$font-size}) / 3);
   padding-left: 1.5rem;
 

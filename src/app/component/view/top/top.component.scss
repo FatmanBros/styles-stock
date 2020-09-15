@@ -12,12 +12,10 @@ $padding: 1.5rem;
 }
 
 .menu-frame {
-  overflow-y: auto;
-  overflow-x: hidden;
   padding-left: $padding;
 
   width: 20rem;
-  
+
   border-right: solid 1px #5f5f5f;
 }
 
@@ -28,6 +26,8 @@ $padding: 1.5rem;
 
 .view-frame {
   max-width: 70%;
+  max-height: calc(100vh - 3.5rem);
+  overflow: auto;
 }
 
 .example {
