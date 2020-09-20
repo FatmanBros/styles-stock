@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
+import { Component, Inject, OnInit } from '@angular/core';
+import { MatDialog, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Subscription } from 'rxjs';
 import { ModuleConstants } from 'src/app/module/module-constants';
 import { OutframeService } from 'src/app/service/outframe-service';
@@ -23,7 +23,7 @@ export class TopComponent implements OnInit {
 
   constructor(
     private matDialog: MatDialog,
-    private outFrameService: OutframeService
+    private outFrameService: OutframeService,
   ) { }
 
   ngOnInit(): void {

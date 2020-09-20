@@ -8,7 +8,7 @@ import { OutframeService } from 'src/app/service/outframe-service';
 })
 export class GroupComponent implements OnInit {
 
-  public groupTitle: string = "";
+  public groupTitle = '';
   public detailList: { title: string, path: string, component: any }[];
 
   @Input()
@@ -16,7 +16,7 @@ export class GroupComponent implements OnInit {
     this.groupTitle = contents.title;
     this.detailList = Object.keys(contents.detail).map(key => {
       return { title: key, path: '/' + contents.title + '/' + key, component: contents.detail[key].component };
-    })
+    });
   }
 
   constructor(
@@ -28,12 +28,12 @@ export class GroupComponent implements OnInit {
 
   /**
    * ダイアログでページの一部を表示する
-   * 
    * @param detail 
    */
   public selectExample(detail: { component: any }) {
     this.outframeService.setExampleComponent(detail.component);
   }
+
   /**
    * ダイアログの選択解除
    */

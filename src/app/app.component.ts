@@ -16,15 +16,15 @@ export class AppComponent implements OnInit, OnDestroy {
 
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
     const titleSubscription = this.outFrameService.$title.subscribe(title => {
       this.title = title;
-    })
+    });
     this.subscriptions.push(titleSubscription);
   }
 
-  ngOnDestroy() {
-    this.subscriptions.forEach(ss => ss.unsubscribe())
+  ngOnDestroy(): void {
+    this.subscriptions.forEach(ss => ss.unsubscribe());
   }
 
 }

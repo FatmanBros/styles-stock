@@ -1,17 +1,17 @@
 <div fxLayout="column">
   <div>
     <label>CSS</label>
-    <ngx-codemirror [(ngModel)]="cssContent" [options]="{ lineNumbers: true, theme: 'material', mode: 'markdown' }">
+    <ngx-codemirror [(ngModel)]="cssContent" [options]="codeMirrorOptions">
     </ngx-codemirror>
   </div>
   <div>
     <label>HTML</label>
-    <ngx-codemirror [(ngModel)]="htmlContent" [options]="{ lineNumbers: true, theme: 'material', mode: 'markdown' }">
+    <ngx-codemirror [(ngModel)]="htmlContent" [options]="codeMirrorOptions">
     </ngx-codemirror>
   </div>
   <div>
     <label>Script</label>
-    <ngx-codemirror [(ngModel)]="scriptContent" [options]="{ lineNumbers: true, theme: 'material', mode: 'markdown' }">
+    <ngx-codemirror [(ngModel)]="scriptContent" [options]="codeMirrorOptions">
     </ngx-codemirror>
   </div>
 </div>

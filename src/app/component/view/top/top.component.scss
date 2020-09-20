@@ -20,7 +20,9 @@ $padding: 1.5rem;
 }
 
 .code-frame {
-  width: 50rem;
+  width: 40%;
+  min-width: 30rem;
+  max-width: 30rem;
   margin-right: $padding;
 }
 

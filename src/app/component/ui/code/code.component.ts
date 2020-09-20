@@ -9,6 +9,15 @@ import { DynamicComponent } from '../../view/dynamic.component';
 })
 export class CodeComponent implements OnInit {
 
+  public codeMirrorOptions = {
+    lineNumbers: true,
+    theme: 'material',
+    mode: 'markdown',
+    lineWrapping: false,
+    tabSize: 2,
+    fixedGutter: true,
+  };
+
   public cssContent: string;
 
   public htmlContent: string;
@@ -20,10 +29,10 @@ export class CodeComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.outFrameService.$select.subscribe((selected: any) => {
-      let template = selected['decorators'][0]['args'][0]['templateUrl']
-      let style = selected['decorators'][0]['args'][0]['styleUrls'][0]
-    })
+    // this.outFrameService.$select.subscribe((selected: any) => {
+    //   let template = selected['decorators'][0]['args'][0]['templateUrl'];
+    //   let style = selected['decorators'][0]['args'][0]['styleUrls'][0];
+    // });
   }
 
 

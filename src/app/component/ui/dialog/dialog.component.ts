@@ -20,10 +20,10 @@ export class DialogComponent implements OnInit {
     if (!component) {
       return;
     }
-    let factory = this.resolver.resolveComponentFactory(component);
+    const factory = this.resolver.resolveComponentFactory(component);
     this.viewContainerRef.clear();
     this.viewContainerRef.createComponent(factory);
-  };
+  }
 
   private factory: ComponentFactory<DynamicComponent>;
 
@@ -33,6 +33,6 @@ export class DialogComponent implements OnInit {
   ) {
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
   }
 }

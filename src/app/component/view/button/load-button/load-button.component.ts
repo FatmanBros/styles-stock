@@ -7,15 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoadButtonComponent implements OnInit {
 
-  public loading: boolean = false;
-
-  public validate: boolean = false;
+  public loading = false;
+  public validate = false;
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  public async onClick() {
+  public async onClick(): Promise<void> {
     const sleep = (msec: number) => new Promise(resolve => setTimeout(resolve, msec));
 
     this.loading = true;
